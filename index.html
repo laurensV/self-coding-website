@@ -3,18 +3,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-    <style>
-        * {
-            box-sizing: border-box;
-            font-family: monospace;
-        }
-        #content {
-            white-space: pre-wrap;
-            -webkit-user-modify: read-write-plaintext-only;
-            display: block;
-        }
-    </style>
-    <style contenteditable id="content">
-    </style>
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: monospace;
+            }
+            #content {
+                white-space: pre-wrap;
+                -webkit-user-modify: read-write-plaintext-only;
+                display: block;
+            }
+        </style>
+        <style contenteditable id="content">/* test self-typing visible style block */
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                style = document.getElementById('content');
+                const initial = style.innerHTML;
+                style.innerHTML = '';
+                type(initial, style);
+            });
+
+            // Append a single character at a time to a element
+            function type (string, el, interval = 26, index = 0) {
+                if (index < string.length) {
+                    const char = string[index++];
+                    el.innerHTML += char;
+                    // Scroll to bottom of el
+                    window.scrollTo(0, el.scrollHeight);
+                    el.scrollTop = el.scrollHeight;
+                    let multiplier = 1;
+                    // Slow down after certain characters
+                    if (['\n','.','!','?','}'].includes(char)) multiplier = 10;
+                    else if ([',',';',':','{'].includes(char)) multiplier = 5;
+                    else if ([].includes(char)) multiplier = 2;
+                    // Repeat for next characters
+                    setTimeout(() => {
+                        type(string, el, interval, index);
+                    }, interval * multiplier);
+                }
+            }
+        </script>
     </body>
 </html>
