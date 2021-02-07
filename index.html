@@ -14,7 +14,133 @@
                 display: block;
             }
         </style>
-        <style contenteditable id="content">/* test self-typing visible style block */
+        <style contenteditable id="content">/**
+ * Hi Human!
+ *
+ * I am Website.
+ *
+ * Not much too see here at the moment...
+ * I am just a simple style block.
+ * with some autotyping javascript.
+ *
+ * Let's make Website look nice!
+ */
+
+/**
+ * Some smooth transitions are always good
+ */
+* {
+    transition: 0.8s all;
+}
+
+/**
+ * Hm, nothing happened..
+ * Not yet.. ;)
+ *
+ * Do you like dark mode, Human?
+ */
+body {
+    margin: 14px;
+    background: rgb(43, 50, 71);
+
+    /* That's a bit hard to read, sorry! */
+    color: white;
+}
+
+/**
+ * That's better!
+ * Now you can see me again.
+ *
+ * Let's make us look like cool hackers.
+ */
+#content {
+    overflow: auto;
+    padding: 12px;
+    max-height: 300px;
+    height: 50vh;
+    width: 600px;
+    max-width: 100%;
+    padding: 12px;
+    margin: 0 auto;
+    background: rgb(48, 48, 48);
+    color: lime;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
+}
+
+/**
+ * Let's have some fun..
+ * By flipping Website!
+ */
+#content {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+
+/**
+* That looks really cool,
+* but a bit unpractical.
+* Let's flip it back
+*/
+#content {
+    transform: rotateY(0deg);
+    /* but let's make a rainbow background instead! */
+    background: rgba(0, 0, 0, 0) linear-gradient(45deg, rgb(255, 0, 0) 0%, rgb(255, 154, 0) 10%, rgb(208, 222, 33) 20%, rgb(79, 220, 74) 30%, rgb(63, 218, 216) 40%, rgb(47, 201, 226) 50%, rgb(28, 127, 238) 60%, rgb(95, 21, 242) 70%, rgb(186, 12, 248) 80%, rgb(251, 7, 217) 90%, rgb(255, 0, 0) 100%) repeat scroll 0% 0% / 300% 300%;
+    background-size: 300%;
+    color: black;
+}
+
+/**
+ * That is so cool!
+ * Let's make it even cooler with animations
+ */
+@keyframes moveGradient {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+#content {
+    /* Let's animate this rainbow forever */
+    animation: moveGradient 3s linear alternate infinite;
+}
+
+/**
+ * Alright that was fun!
+ * But forever might be a bit long...
+ * I'll restore the background
+ */
+#content {
+    color: lime;
+    background: rgb(48, 48, 48);
+}
+
+/**
+ * And finally:
+ * The author of the source code.
+ * not that he did a lot,
+ * I styled myself, but anyway:
+ */
+#content:after {
+    display: block;
+    color: white;
+    margin-top: 10px;
+    content: "author: Laurens Verspeek";
+}
+
+/*
+ * I am done for now...
+ * But you can also edit this box
+ * Try to play around with it
+ */
+#content {
+    /* For example, you could add a text shadow */
+    text-shadow: 2px 2px 3px black;
+}
         </style>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
