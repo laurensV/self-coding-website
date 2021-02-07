@@ -15,4 +15,4 @@ When you add one simple function for auto-typing content into the style block (s
 https://laurensv.github.io/self-coding-website/
 
 ## Screenshot
-[![Demo CountPages alpha](docs/self-coding-website-snippet.gif)](docs/self-coding-website-snippet.mp4)
+[![Demo CountPages alpha](docs/self-coding-website-snippet.gif)](https://github.com/laurensV/self-coding-website/blob/main/docs/self-coding-website-snippet.mp4?raw=true)
