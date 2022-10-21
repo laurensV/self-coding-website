@@ -1,5 +1,5 @@
 global: 
-	trigger:
-		branch: 
-			- test
+  trigger:
+    branch:
+      - test
       - temp
