@@ -1,3 +1,14 @@
+nosana:
+  description: Run Test
+
 global:
- trigger:
-  branch: main
+  image: registry.hub.docker.com/library/node:16
+  trigger:
+    branch:
+      - all
+
+jobs:
+  - name: install-deps and run test
+    commands: 
+      - npm ci
+      - npm run test
