@@ -1,2 +1,5 @@
-commands: []
-image: test
+global: 
+	trigger:
+		branch: 
+			- test
+      - temp
