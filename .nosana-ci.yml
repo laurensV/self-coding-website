@@ -1,5 +1,5 @@
 nosana:
-  description: Run Test
+  description: Run Test 2
 
 global:
   image: registry.hub.docker.com/library/node:16
