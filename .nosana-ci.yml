@@ -15,8 +15,8 @@ global:
 jobs:
   - name: test-colors
     commands: 
-      - echo $CLICOLOR_FORCE
-      - echo $TERM
-      - echo $COLORTERM
+      - sh -c 'echo $CLICOLOR_FORCE'
+      - sh -c 'echo $TERM'
+      - sh -c 'echo $COLORTERM'
       - ls -al
       - ls -al --color
