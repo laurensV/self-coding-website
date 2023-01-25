@@ -6,11 +6,11 @@ global:
   trigger:
     branch:
       - main
-    environment:
-      TERM: xterm-color
-      FORCE_COLOR: 1
-      CLICOLOR: 1
-      CLICOLOR_FORCE: 1
+  environment:
+    TERM: xterm-color
+    FORCE_COLOR: 1
+    CLICOLOR: 1
+    CLICOLOR_FORCE: 1
 
 jobs:
   - name: test-colors
