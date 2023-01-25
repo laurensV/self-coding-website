@@ -1,14 +1,20 @@
 nosana:
-  description: Run Test 3
+  description: Test Colors
 
 global:
-  image: registry.hub.docker.com/library/node:16
+  image: ubuntu
   trigger:
     branch:
       - main
+    environment:
+      TERM: xterm-color
+      FORCE_COLOR: 1
+      CLICOLOR: 1
+      CLICOLOR_FORCE: 1
 
 jobs:
-  - name: install-deps and run test
+  - name: test-colors
     commands: 
-      - npm ci
-      - npm run test
+      - ls
+      - ls -al
+      - ls --color
