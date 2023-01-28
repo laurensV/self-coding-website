@@ -10,7 +10,7 @@ global:
     TERM: xterm-color
     SECRET_VALUE:
       type: nosana/secret
-      endpoint: https://secrets.nosana.ci
+      endpoint: https://secrets.k8s.dev.nos.ci
       value: SECRET_VALUE
     FORCE_COLOR: "1"
     CLICOLOR: "1"
