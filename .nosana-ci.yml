@@ -7,11 +7,7 @@ global:
     branch:
       - main
   environment:
-    TERM: xterm-color
-    SECRET_VALUE:
-      type: nosana/secret
-      endpoint: https://secrets.k8s.dev.nos.ci
-      value: SECRET_VALUE
+    TERM: xterm-newTerminalEmulator
     FORCE_COLOR: "1"
     CLICOLOR: "1"
     CLICOLOR_FORCE: "1"
@@ -19,8 +15,8 @@ global:
 jobs:
   - name: test-colors
     commands: 
-      - sh -c 'echo $CLICOLOR_FORCE'
-      - sh -c 'echo $TERM'
-      - sh -c 'echo $COLORTERM'
+      - echo $CLICOLOR_FORCE
+      - echo $TERM
+      - echo $LS_COLORS
       - ls -al
       - ls -al --color
