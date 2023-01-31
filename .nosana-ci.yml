@@ -18,6 +18,5 @@ jobs:
     commands: 
       - echo $CLICOLOR_FORCE
       - echo $TERM
-      - echo $LS_COLORS
       - ls -al
       - ls -al --color
