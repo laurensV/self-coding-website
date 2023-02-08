@@ -7,7 +7,7 @@ global:
     branch:
       - main
   environment:
-    TERM: xterm-newTerminalEmulator
+    TERM: xterm
     FORCE_COLOR: "1"
     CLICOLOR: "1"
     CLICOLOR_FORCE: "1"
