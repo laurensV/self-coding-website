@@ -4,8 +4,8 @@ nosana:
 global:
   image: ubuntu
   trigger:
-    branch:
-      - main
+    - pull-request: true
+    - pull_request: true
   environment:
     TERM: xterm
     FORCE_COLOR: "1"
