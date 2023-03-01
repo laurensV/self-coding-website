@@ -4,6 +4,8 @@ nosana:
 global:
   image: ubuntu
   trigger:
+    - branch:
+       - main
     - pull-request: true
     - pull_request: true
   environment:
