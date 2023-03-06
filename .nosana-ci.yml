@@ -17,5 +17,4 @@ jobs:
       - SECRET_VALUE
     commands: 
       - echo $SECRET_VALUE
-      - echo $global.test
       - echo $test
