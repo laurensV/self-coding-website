@@ -1,5 +1,5 @@
 # Self-Coding Website
-Website that will style itself with a simple technique. By using the `contenteditable` attribute on a style block and giving it just the initial styling of `display:block;` you can now both see and change the CSS styling of your website. It's as simple as this:
+3Website that will style itself with a simple technique. By using the `contenteditable` attribute on a style block and giving it just the initial styling of `display:block;` you can now both see and change the CSS styling of your website. It's as simple as this:
 ```html
 <style contenteditable style="display:block;">
 /*You can now both see and change the styling of this block */
