@@ -4,8 +4,9 @@ nosana:
 global:
   image: ubuntu
   trigger:
-    - branch:
-       - main
+    pull_request:
+      branch:
+        - main
   secrets:
     - global.test  
   environment:
