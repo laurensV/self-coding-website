@@ -3,11 +3,6 @@ nosana:
 
 global:
   image: ubuntu
-  trigger:
-    pull_request:
-      branch:
-        - main
-    push: true
   secrets:
     - global.test  
   environment:
