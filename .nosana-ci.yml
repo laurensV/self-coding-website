@@ -1,6 +1,3 @@
-nosana:
-  description: Test Simple Secrets
-
 global:
   image: ubuntu
   secrets:
