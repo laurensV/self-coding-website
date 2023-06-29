@@ -1,14 +1,10 @@
 global:
   image: ubuntu
-  secrets:
-    - global.test  
-  environment:
-    TERM: xterm
 
 jobs:
-  - name: test-colors
-    secrets:
-      - SECRET_VALUE
+  - name: echo
     commands: 
-      - echo $SECRET_VALUE
-      - echo $test
+      - echo "Hello World!"
+  - name: ls
+    commands:
+      - ls -al --color    
