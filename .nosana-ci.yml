@@ -1,10 +1,21 @@
 global:
-  image: ubuntu
+  image: registry.hub.docker.com/_/microsoft-dotnet-nightly-sdk:7.0
+
+  trigger:
+    branch:
+      - master
 
 jobs:
-  - name: echo
-    commands: 
-      - echo "Hello World!"
-  - name: ls
+  - name: build
     commands:
-      - ls -al --color    
+      - dotnet build
+    artifacts:
+      - name: dotnet
+        path: ./dotnet/
+
+  - name: test
+    commands:
+      - dotnet test
+    resources:
+      - name: dotnet
+        path: ./dotnet/
