@@ -1,21 +1,21 @@
 global:
-  image: mcr.microsoft.com/dotnet/nightly/sdk:7.0
+  image: ubuntu
 
   trigger:
     branch:
       - main
 
 jobs:
-  - name: build
+  - name: touch test
     commands:
-      - dotnet build
+      - touch test.txt
     artifacts:
-      - name: dotnet
-        path: ./dotnet/
+      - name: test
+        path: ./test.txt
 
-  - name: test
+  - name: cat test
     commands:
-      - dotnet test
+      - cat test.txt
     resources:
-      - name: dotnet
-        path: ./dotnet/
+      - name: test
+        path: ./test.txt
