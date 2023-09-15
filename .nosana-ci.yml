@@ -18,4 +18,4 @@ jobs:
       - cat test.txt
     resources:
       - name: test
-        path: ./test.txt
+        path: ./
